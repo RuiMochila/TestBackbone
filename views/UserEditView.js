@@ -8,24 +8,28 @@ var UserEditView = Backbone.View.extend({
   },
   
   saveUser: function (ev) {
-    var userDetails = $(ev.currentTarget).serializeObject();
-    var user = new User();
-    // Vai chamar o sync com method update porque o user já existe
-    user.save(userDetails, {
-      success: function (user) {
-        router.navigate('', {trigger:true});
-      }
-    });
+    // var userDetails = $(ev.currentTarget).serializeObject();
+    // var user = new User();
+    // // Vai chamar o sync com method update porque o user já existe
+    // user.save(userDetails, {
+    //   success: function (user) {
+    //     router.navigate('', {trigger:true});
+    //   }
+    // });
+    // Faço isto porque n acabei as operações crud 
+    router.navigate('', {trigger:true});
     return false;
   },
   
   deleteUser: function (ev) {
-    this.user.destroy({
-      success: function () {
-        console.log('destroyed');
-        router.navigate('', {trigger:true});
-      }
-    })
+    // this.user.destroy({
+    //   success: function () {
+    //     console.log('destroyed');
+    //     router.navigate('', {trigger:true});
+    //   }
+    // })
+    // Faço isto porque n acabei as operações crud 
+    router.navigate('', {trigger:true});
   },
 
   render: function (options) {
