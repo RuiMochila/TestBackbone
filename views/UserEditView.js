@@ -30,6 +30,7 @@ var UserEditView = Backbone.View.extend({
     // })
     // Faço isto porque n acabei as operações crud 
     router.navigate('', {trigger:true});
+    return false;
   },
 
   render: function (options) {
